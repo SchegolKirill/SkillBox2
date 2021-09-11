@@ -11,14 +11,10 @@ public class Wall implements Obstacle {
         return height;
     }
 
-    @Override
-    public int getLength() {
-        return 0;
-    }
 
     @Override
     public boolean action(Movement body){
-        if((body.getJump() - height)>0){
+        if(body.getJump() > height){
             System.out.println("Успешный прыжок");
             return true;
         }

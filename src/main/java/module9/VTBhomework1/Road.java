@@ -14,16 +14,11 @@ public class Road implements Obstacle {
 
     @Override
     public boolean action(Movement body){
-        if((body.getRun() - length)>0){
+        if(body.getRun() > length){
             System.out.println("Успешный забег");
             return true;
         }
         System.out.println("Неудачный забег");
         return false;
-    }
-
-    @Override
-    public int getHeight() {
-        return 0;
     }
 }
