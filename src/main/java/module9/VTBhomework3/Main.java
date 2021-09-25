@@ -1,8 +1,14 @@
 package module9.VTBhomework3;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.ArrayList;
 
 public class Main {
+
+    private static Logger logger;
+
     public static void main(String[] args) {
 
         /////////////////////////Пункты 1 и 2///////////////////////////
@@ -19,8 +25,10 @@ public class Main {
         }
 
         ///////////////////////////Какая-то дичь с фруктами/////////////////////////////////
-
+        logger = LogManager.getLogger();
+        try {
         Box appleBox = new Box();
+
         Box orangeBox = new Box();
         Box emptyBox = new Box();
 
@@ -34,12 +42,15 @@ public class Main {
 
         appleBox.changeFruits(orangeBox);
         for(Fruit fruit : appleBox.getFruitBox()){
-            System.out.println(fruit);
+            logger.info(fruit);
         }
-        System.out.println("\nПроверка на пустую коробку\n");
+        logger.info("\nПроверка на пустую коробку\n");
         emptyBox.changeFruits(orangeBox);
         for(Fruit fruit : emptyBox.getFruitBox()){
-            System.out.println(fruit);
+            logger.info(fruit);
+        }
+        }catch (Exception ex){
+            logger.error(ex);
         }
     }
 
