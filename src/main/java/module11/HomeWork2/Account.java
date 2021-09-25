@@ -11,8 +11,6 @@ public class Account implements Comparable<Account>
     public Account(String accNumber, long money){
         this.accNumber = accNumber;
         this.money = money;
-//        accNumber = String.valueOf(Math.round(Math.random() * 1000));
-//        money = Math.round(Math.random() * 1000000);
     }
 
     public long getMoney(){

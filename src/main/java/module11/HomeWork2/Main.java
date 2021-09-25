@@ -34,40 +34,45 @@ public class Main {
         bank.addAccount(acc9);
         bank.addAccount(acc10);
 
+        System.out.println("В банке денег до запуска потоков: " + bank.getBankBalance());
+
         new Thread(()->{
             try {
-                bank.transfer(acc1.getAccNumber(), acc2.getAccNumber(), (long) (Math.random() * 1000000));
+                bank.transfer(acc1.getAccNumber(), acc2.getAccNumber(), (long) (Math.random() * 50000));
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }).start();
+
+        new Thread(()->{
+            try {
+                bank.transfer(acc3.getAccNumber(), acc4.getAccNumber(), (long) (Math.random() * 50000));
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }).start();
         new Thread(()->{
             try {
-                bank.transfer(acc3.getAccNumber(), acc4.getAccNumber(), (long) (Math.random() * 1000000));
+                bank.transfer(acc5.getAccNumber(), acc6.getAccNumber(), (long) (Math.random() * 50000));
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }).start();
         new Thread(()->{
             try {
-                bank.transfer(acc5.getAccNumber(), acc6.getAccNumber(), (long) (Math.random() * 1000000));
+                bank.transfer(acc7.getAccNumber(), acc8.getAccNumber(), (long) (Math.random() * 50000));
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }).start();
         new Thread(()->{
             try {
-                bank.transfer(acc7.getAccNumber(), acc8.getAccNumber(), (long) (Math.random() * 1000000));
+                bank.transfer(acc9.getAccNumber(), acc10.getAccNumber(), (long) (Math.random() * 50000));
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }).start();
-        new Thread(()->{
-            try {
-                bank.transfer(acc9.getAccNumber(), acc10.getAccNumber(), (long) (Math.random() * 1000000));
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }).start();
+
+
     }
 }

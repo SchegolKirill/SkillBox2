@@ -1,11 +1,12 @@
 package module11.HomeWork2;
 
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 
 public class Bank
 {
-    private HashMap<String, Account> accounts;
+    private final HashMap<String, Account> accounts = new HashMap<>();
     private final Random random = new Random();
     private long bankMoney;
 
@@ -31,15 +32,31 @@ public class Bank
      * метод isFraud. Если возвращается true, то делается блокировка
      * счетов (как – на ваше усмотрение)
      */
-    public synchronized void transfer(String fromAccountNum, String toAccountNum, long amount) throws InterruptedException {
-        while(amount <= 50000 && !isFraud(fromAccountNum, toAccountNum, amount)) {
+    public void transfer(String fromAccountNum, String toAccountNum, long amount) throws InterruptedException {
+        if (amount <= 50000) {
             long plusMoney = accounts.get(toAccountNum).getMoney() + amount;
             long minusMoney = accounts.get(fromAccountNum).getMoney() - amount;
 
             accounts.get(toAccountNum).setMoney(plusMoney);
             accounts.get(fromAccountNum).setMoney(minusMoney);
+            System.out.println("Сумма перевода: " + amount + "\n" +
+                    "У " + toAccountNum + " " + accounts.get(toAccountNum).getMoney() + " на счету\n" +
+                    "У " + fromAccountNum + " " + accounts.get(fromAccountNum).getMoney() + " на счету");
+        }else{
+            boolean ban = isFraud(fromAccountNum, toAccountNum, amount);
+            if(ban){
+                wait();
+            }else{
+                long plusMoney = accounts.get(toAccountNum).getMoney() + amount;
+                long minusMoney = accounts.get(fromAccountNum).getMoney() - amount;
+
+                accounts.get(toAccountNum).setMoney(plusMoney);
+                accounts.get(fromAccountNum).setMoney(minusMoney);
+                System.out.println("У " + toAccountNum + " " + accounts.get(toAccountNum).getMoney() + " на счету");
+                System.out.println("У " + fromAccountNum + " " + accounts.get(fromAccountNum).getMoney() + " на счету");
+            }
         }
-        System.out.println("Счета заблокированы");
+        System.out.println("В банке денег после запуска потока: " + this.getBankBalance());
     }
 
     /**
@@ -49,4 +66,11 @@ public class Bank
         return accounts.get(accountNum).getMoney();
     }
 
+    public long getBankBalance(){
+        bankMoney = 0;
+        for(Map.Entry<String, Account> mapEntry : accounts.entrySet()){
+            bankMoney += mapEntry.getValue().getMoney();
+        }
+        return bankMoney;
+    }
 }
