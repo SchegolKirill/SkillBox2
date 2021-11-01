@@ -32,8 +32,11 @@ public class Bank
      * метод isFraud. Если возвращается true, то делается блокировка
      * счетов (как – на ваше усмотрение)
      */
-    public void transfer(String fromAccountNum, String toAccountNum, long amount) throws InterruptedException {
+    public synchronized void transfer(String fromAccountNum, String toAccountNum, long amount) throws InterruptedException {
         if (amount <= 50000) {
+            System.out.println(
+                    "До перевод у " + toAccountNum + " " + accounts.get(toAccountNum).getMoney() + " на счету\n" +
+                    "До перевод у " + fromAccountNum + " " + accounts.get(fromAccountNum).getMoney() + " на счету");
             long plusMoney = accounts.get(toAccountNum).getMoney() + amount;
             long minusMoney = accounts.get(fromAccountNum).getMoney() - amount;
 
@@ -45,8 +48,12 @@ public class Bank
         }else{
             boolean ban = isFraud(fromAccountNum, toAccountNum, amount);
             if(ban){
+                System.out.println("Счета заблокированы");
                 wait();
             }else{
+                System.out.println(
+                        "До перевод у " + toAccountNum + " " + accounts.get(toAccountNum).getMoney() + " на счету\n" +
+                                "До перевод у " + fromAccountNum + " " + accounts.get(fromAccountNum).getMoney() + " на счету");
                 long plusMoney = accounts.get(toAccountNum).getMoney() + amount;
                 long minusMoney = accounts.get(fromAccountNum).getMoney() - amount;
 

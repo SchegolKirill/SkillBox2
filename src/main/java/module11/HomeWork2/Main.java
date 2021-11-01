@@ -67,7 +67,7 @@ public class Main {
         }).start();
         new Thread(()->{
             try {
-                bank.transfer(acc9.getAccNumber(), acc10.getAccNumber(), (long) (Math.random() * 50000));
+                bank.transfer(acc9.getAccNumber(), acc10.getAccNumber(), (long) (Math.random() * 500000));
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

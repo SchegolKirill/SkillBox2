@@ -21,3 +21,87 @@
 2021-52-14 21:52:45.831 [main] INFO  module9.VTBhomework3.Main - Апельсин
 2021-52-14 21:52:45.831 [main] INFO  module9.VTBhomework3.Main - Апельсин
 2021-52-14 21:52:45.831 [main] INFO  module9.VTBhomework3.Main - Апельсин
+2021-22-01 14:22:39.732 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+2021-22-01 14:22:41.382 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-22-01 14:22:42.002 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/skillbox?useSSL=false]
+2021-22-01 14:22:42.002 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=password, user=root}
+2021-22-01 14:22:42.002 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2021-22-01 14:22:42.012 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 10 (min=1)
+2021-22-01 14:22:42.445 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-23-01 14:23:00.359 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+2021-23-01 14:23:01.721 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-23-01 14:23:02.340 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/skillbox?useSSL=false]
+2021-23-01 14:23:02.340 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=password, user=root}
+2021-23-01 14:23:02.340 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2021-23-01 14:23:02.355 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 10 (min=1)
+2021-23-01 14:23:02.741 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-35-01 14:35:07.765 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+2021-35-01 14:35:09.025 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-35-01 14:35:09.622 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/skillbox?useSSL=false]
+2021-35-01 14:35:09.622 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=password, user=root}
+2021-35-01 14:35:09.622 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2021-35-01 14:35:09.638 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 10 (min=1)
+2021-35-01 14:35:09.923 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-36-01 14:36:02.568 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+2021-36-01 14:36:03.641 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-36-01 14:36:04.174 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/skillbox?useSSL=false]
+2021-36-01 14:36:04.174 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=password, user=root}
+2021-36-01 14:36:04.174 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2021-36-01 14:36:04.190 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 10 (min=1)
+2021-36-01 14:36:04.490 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-42-01 14:42:38.031 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+2021-42-01 14:42:39.388 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-42-01 14:42:39.937 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/skillbox?useSSL=false]
+2021-42-01 14:42:39.937 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=password, user=root}
+2021-42-01 14:42:39.937 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2021-42-01 14:42:39.952 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 10 (min=1)
+2021-42-01 14:42:40.237 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-45-01 14:45:01.597 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+2021-45-01 14:45:03.502 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-45-01 14:45:04.222 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/skillbox?useSSL=false]
+2021-45-01 14:45:04.222 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=password, user=root}
+2021-45-01 14:45:04.222 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2021-45-01 14:45:04.238 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 10 (min=1)
+2021-45-01 14:45:04.602 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-45-01 14:45:29.196 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+2021-45-01 14:45:30.472 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-45-01 14:45:31.072 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/skillbox?useSSL=false]
+2021-45-01 14:45:31.077 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=password, user=root}
+2021-45-01 14:45:31.077 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2021-45-01 14:45:31.077 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 10 (min=1)
+2021-45-01 14:45:31.462 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-46-01 14:46:22.501 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+2021-47-01 14:47:19.151 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-48-01 14:48:16.359 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/skillbox?useSSL=false]
+2021-48-01 14:48:16.359 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=password, user=root}
+2021-48-01 14:48:16.359 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2021-48-01 14:48:16.390 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 10 (min=1)
+2021-48-01 14:48:17.778 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-48-01 14:48:49.695 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+2021-48-01 14:48:51.125 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-48-01 14:48:51.673 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/skillbox?useSSL=false]
+2021-48-01 14:48:51.673 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=password, user=root}
+2021-48-01 14:48:51.673 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2021-48-01 14:48:51.673 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 10 (min=1)
+2021-48-01 14:48:51.990 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-50-01 14:50:12.434 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+2021-50-01 14:50:13.814 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-50-01 14:50:14.440 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/skillbox?useSSL=false]
+2021-50-01 14:50:14.440 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=password, user=root}
+2021-50-01 14:50:14.440 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2021-50-01 14:50:14.440 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 10 (min=1)
+2021-50-01 14:50:14.756 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-58-01 14:58:37.281 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+2021-58-01 14:58:38.591 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-58-01 14:58:39.130 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/skillbox?useSSL=false]
+2021-58-01 14:58:39.130 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=password, user=root}
+2021-58-01 14:58:39.130 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2021-58-01 14:58:39.145 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 10 (min=1)
+2021-58-01 14:58:39.430 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2021-12-01 15:12:17.710 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+2021-12-01 15:12:19.061 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-12-01 15:12:19.587 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/skillbox?useSSL=false]
+2021-12-01 15:12:19.587 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=password, user=root}
+2021-12-01 15:12:19.587 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2021-12-01 15:12:19.587 [main] INFO  org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 10 (min=1)
+2021-12-01 15:12:19.888 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
