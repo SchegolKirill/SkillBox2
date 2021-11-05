@@ -1,0 +1,26 @@
+2021-14-05 14:14:06.864 [main] ERROR org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - Connection leak detected: there are 1 unclosed connections upon shutting down pool jdbc:mysql://localhost:3306/skillbox?useSSL=false
+2021-14-05 14:14:06.893 [main] ERROR org.hibernate.orm.connections.pooling - Connection leak detected: there are 1 unclosed connections!
+2021-19-05 14:19:06.233 [main] ERROR org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - Connection leak detected: there are 1 unclosed connections upon shutting down pool jdbc:mysql://localhost:3306/skillbox?useSSL=false
+2021-19-05 14:19:06.253 [main] ERROR org.hibernate.orm.connections.pooling - Connection leak detected: there are 1 unclosed connections!
+2021-24-05 14:24:41.056 [main] ERROR org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - Connection leak detected: there are 1 unclosed connections upon shutting down pool jdbc:mysql://localhost:3306/skillbox?useSSL=false
+2021-24-05 14:24:41.066 [main] ERROR org.hibernate.orm.connections.pooling - Connection leak detected: there are 1 unclosed connections!
+2021-25-05 14:25:42.976 [main] ERROR org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - Connection leak detected: there are 1 unclosed connections upon shutting down pool jdbc:mysql://localhost:3306/skillbox?useSSL=false
+2021-25-05 14:25:42.989 [main] ERROR org.hibernate.orm.connections.pooling - Connection leak detected: there are 1 unclosed connections!
+2021-31-05 14:31:41.342 [main] ERROR org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - Connection leak detected: there are 1 unclosed connections upon shutting down pool jdbc:mysql://localhost:3306/skillbox?useSSL=false
+2021-31-05 14:31:41.361 [main] ERROR org.hibernate.orm.connections.pooling - Connection leak detected: there are 1 unclosed connections!
+2021-34-05 14:34:19.650 [main] ERROR org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - Connection leak detected: there are 1 unclosed connections upon shutting down pool jdbc:mysql://localhost:3306/skillbox?useSSL=false
+2021-34-05 14:34:19.662 [main] ERROR org.hibernate.orm.connections.pooling - Connection leak detected: there are 1 unclosed connections!
+2021-35-05 14:35:55.843 [main] ERROR org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - Connection leak detected: there are 1 unclosed connections upon shutting down pool jdbc:mysql://localhost:3306/skillbox?allowPublicKeyRetrieval=true
+2021-35-05 14:35:55.847 [main] ERROR org.hibernate.orm.connections.pooling - Connection leak detected: there are 1 unclosed connections!
+2021-39-05 14:39:05.548 [main] ERROR org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - Connection leak detected: there are 1 unclosed connections upon shutting down pool jdbc:mysql://localhost:3306/skillbox?allowPublicKeyRetrieval=true
+2021-39-05 14:39:05.552 [main] ERROR org.hibernate.orm.connections.pooling - Connection leak detected: there are 1 unclosed connections!
+2021-14-05 15:14:31.538 [main] ERROR org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - Connection leak detected: there are 1 unclosed connections upon shutting down pool jdbc:mysql://localhost:3306/skillbox?allowPublicKeyRetrieval=true
+2021-14-05 15:14:31.542 [main] ERROR org.hibernate.orm.connections.pooling - Connection leak detected: there are 1 unclosed connections!
+2021-33-05 15:33:57.223 [main] ERROR org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - Connection leak detected: there are 1 unclosed connections upon shutting down pool jdbc:mysql://localhost:3306/skillbox?allowPublicKeyRetrieval=true
+2021-33-05 15:33:57.227 [main] ERROR org.hibernate.orm.connections.pooling - Connection leak detected: there are 1 unclosed connections!
+2021-35-05 15:35:17.343 [main] ERROR org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - Connection leak detected: there are 1 unclosed connections upon shutting down pool jdbc:mysql://localhost:3306/skillbox?allowPublicKeyRetrieval=true
+2021-35-05 15:35:17.350 [main] ERROR org.hibernate.orm.connections.pooling - Connection leak detected: there are 1 unclosed connections!
+2021-39-05 15:39:56.721 [main] ERROR org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - Connection leak detected: there are 1 unclosed connections upon shutting down pool jdbc:mysql://localhost:3306/skillbox?allowPublicKeyRetrieval=true
+2021-39-05 15:39:56.725 [main] ERROR org.hibernate.orm.connections.pooling - Connection leak detected: there are 1 unclosed connections!
+2021-40-05 15:40:28.142 [main] ERROR org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - Connection leak detected: there are 1 unclosed connections upon shutting down pool jdbc:mysql://localhost:3306/skillbox?allowPublicKeyRetrieval=true
+2021-40-05 15:40:28.146 [main] ERROR org.hibernate.orm.connections.pooling - Connection leak detected: there are 1 unclosed connections!

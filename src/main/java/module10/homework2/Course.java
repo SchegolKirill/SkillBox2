@@ -7,10 +7,40 @@ import javax.persistence.*;
 @Table(name = "courses")
 public class Course {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private Integer id;
+
+    @Column(name = "name")
+    private String name;
+
+    @Column(name = "duration")
+    private Integer duration;
+
+    @Enumerated(EnumType.STRING)
+    @Column(columnDefinition = "enum", name = "type")
+    private CourseType courseType;
+
+    @Column(name = "description")
+    private String description;
+
+    @Column(name = "teacher_id")
+    private Integer teacherId;
+
+    @Column(name = "students_count")
+    private Integer studentsCount;
+
+    @Column(name = "price")
+    private Integer price;
+
+    @Column(name = "price_per_hour")
+    private Float pricePerHour;
+
     public Course() {
     }
 
-    public Course(String name, int duration, CourseType courseType, String description, int teacherId, int studentsCount, int price, float pricePerHour) {
+    public Course(String name, Integer duration, CourseType courseType, String description, Integer teacherId, Integer studentsCount, Integer price, Float pricePerHour) {
         this.name = name;
         this.duration = duration;
         this.courseType = courseType;
@@ -21,41 +51,11 @@ public class Course {
         this.pricePerHour = pricePerHour;
     }
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    private int id;
-
-    @Column(name = "name")
-    private String name;
-
-    @Column(name = "duration")
-    private int duration;
-
-    @Enumerated(EnumType.STRING)
-    @Column(columnDefinition = "type")
-    private CourseType courseType;
-
-    @Column(name = "description")
-    private String description;
-
-    @Column(name = "teacher_id")
-    private int teacherId;
-
-    @Column(name = "students_count")
-    private int studentsCount;
-
-    @Column(name = "price")
-    private int price;
-
-    @Column(name = "price_per_hour")
-    private float pricePerHour;
-
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -67,11 +67,11 @@ public class Course {
         this.name = name;
     }
 
-    public int getDuration() {
+    public Integer getDuration() {
         return duration;
     }
 
-    public void setDuration(int duration) {
+    public void setDuration(Integer duration) {
         this.duration = duration;
     }
 
@@ -91,35 +91,50 @@ public class Course {
         this.description = description;
     }
 
-    public int getTeacherId() {
+    public Integer getTeacherId() {
         return teacherId;
     }
 
-    public void setTeacherId(int teacherId) {
+    public void setTeacherId(Integer teacherId) {
         this.teacherId = teacherId;
     }
 
-    public int getStudentsCount() {
+    public Integer getStudentsCount() {
         return studentsCount;
     }
 
-    public void setStudentsCount(int studentsCount) {
+    public void setStudentsCount(Integer studentsCount) {
         this.studentsCount = studentsCount;
     }
 
-    public int getPrice() {
+    public Integer getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(Integer price) {
         this.price = price;
     }
 
-    public float getPricePerHour() {
+    public Float getPricePerHour() {
         return pricePerHour;
     }
 
-    public void setPricePerHour(float pricePerHour) {
+    public void setPricePerHour(Float pricePerHour) {
         this.pricePerHour = pricePerHour;
+    }
+
+    @Override
+    public String toString() {
+        return "Course{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", duration=" + duration +
+                ", courseType=" + courseType +
+                ", description='" + description + '\'' +
+                ", teacherId=" + teacherId +
+                ", studentsCount=" + studentsCount +
+                ", price=" + price +
+                ", pricePerHour=" + pricePerHour +
+                '}';
     }
 }

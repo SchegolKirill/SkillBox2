@@ -2,22 +2,43 @@ package module10.homework2;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.boot.Metadata;
-import org.hibernate.boot.MetadataSources;
-import org.hibernate.boot.registry.StandardServiceRegistry;
-import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import org.hibernate.cfg.Configuration;
+
+import java.util.List;
+
 
 public class Main {
     public static void main(String[] args) {
-        StandardServiceRegistry registry = new StandardServiceRegistryBuilder().configure("hibernate.cfg.xml").build();
-        Metadata metadata = new MetadataSources(registry).getMetadataBuilder().build();
-        SessionFactory sessionFactory = metadata.getSessionFactoryBuilder().build();
 
-        Session session = sessionFactory.openSession();
+//        StandardServiceRegistry registry = new StandardServiceRegistryBuilder()
+//        .configure("hibernate.cfg.xml").build();
+//        Metadata metadata = new MetadataSources(registry)
+//        .getMetadataBuilder().build();
+//        SessionFactory sessionFactory = metadata.getSessionFactoryBuilder().build();
 
-        Course course = session.get(Course.class, 1);
-        System.out.println(course.getName());
+        SessionFactory sessionFactory = new Configuration()
+                .configure("hibernate.cfg.xml")
+                .addAnnotatedClass(Course.class)
+                .buildSessionFactory();
 
-        sessionFactory.close();
+        try {
+            //Session session = sessionFactory.openSession();
+            Session session = sessionFactory.getCurrentSession();
+            session.beginTransaction();
+
+            List<Course> courseList = session.createQuery("from Course").getResultList();
+
+            for(Course course: courseList){
+                System.out.println(course.getName() + " - " + course.getStudentsCount());
+            }
+
+            session.getTransaction().commit();
+            System.out.println("АУФ");
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }
+        finally {
+            sessionFactory.close();
+        }
     }
 }
