@@ -2,6 +2,8 @@ package module10.homework2;
 
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "courses")
@@ -25,8 +27,9 @@ public class Course {
     @Column(name = "description")
     private String description;
 
-    @Column(name = "teacher_id")
-    private Integer teacherId;
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "teacher_id")
+    private Teacher teacher;
 
     @Column(name = "students_count")
     private Integer studentsCount;
@@ -37,18 +40,38 @@ public class Course {
     @Column(name = "price_per_hour")
     private Float pricePerHour;
 
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "course")
+    private List<Subscription> subscriptions;
+
     public Course() {
     }
 
-    public Course(String name, Integer duration, CourseType courseType, String description, Integer teacherId, Integer studentsCount, Integer price, Float pricePerHour) {
+    public Course(String name, Integer duration, CourseType courseType, String description, Teacher teacher,
+                  Integer studentsCount, Integer price, Float pricePerHour, List<Subscription> subscriptions) {
         this.name = name;
         this.duration = duration;
         this.courseType = courseType;
         this.description = description;
-        this.teacherId = teacherId;
+        this.teacher = teacher;
         this.studentsCount = studentsCount;
         this.price = price;
         this.pricePerHour = pricePerHour;
+        this.subscriptions = subscriptions;
+    }
+
+    public void addSubscriptionToCourse(Subscription subscription){
+        if(subscriptions == null){
+            subscriptions = new ArrayList<>();
+        }
+        subscriptions.add(subscription);
+    }
+
+    public List<Subscription> getSubscriptions() {
+        return subscriptions;
+    }
+
+    public void setSubscriptions(List<Subscription> subscriptions) {
+        this.subscriptions = subscriptions;
     }
 
     public Integer getId() {
@@ -91,12 +114,12 @@ public class Course {
         this.description = description;
     }
 
-    public Integer getTeacherId() {
-        return teacherId;
+    public Teacher getTeacher() {
+        return teacher;
     }
 
-    public void setTeacherId(Integer teacherId) {
-        this.teacherId = teacherId;
+    public void setTeacher(Teacher teacher) {
+        this.teacher = teacher;
     }
 
     public Integer getStudentsCount() {
@@ -131,7 +154,7 @@ public class Course {
                 ", duration=" + duration +
                 ", courseType=" + courseType +
                 ", description='" + description + '\'' +
-                ", teacherId=" + teacherId +
+                ", teacher=" + teacher +
                 ", studentsCount=" + studentsCount +
                 ", price=" + price +
                 ", pricePerHour=" + pricePerHour +

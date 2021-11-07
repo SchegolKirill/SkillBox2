@@ -19,11 +19,16 @@ public class Main {
         SessionFactory sessionFactory = new Configuration()
                 .configure("hibernate.cfg.xml")
                 .addAnnotatedClass(Course.class)
+                .addAnnotatedClass(PurchaseList.class)
+                .addAnnotatedClass(Student.class)
+                .addAnnotatedClass(Subscription.class)
+                .addAnnotatedClass(Teacher.class)
                 .buildSessionFactory();
 
+        Session session = null;
         try {
             //Session session = sessionFactory.openSession();
-            Session session = sessionFactory.getCurrentSession();
+            session = sessionFactory.getCurrentSession();
             session.beginTransaction();
 
             List<Course> courseList = session.createQuery("from Course").getResultList();
@@ -34,10 +39,9 @@ public class Main {
 
             session.getTransaction().commit();
             System.out.println("АУФ");
-        }catch (Exception ex){
-            ex.printStackTrace();
         }
         finally {
+            session.close();
             sessionFactory.close();
         }
     }
