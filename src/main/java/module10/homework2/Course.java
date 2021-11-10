@@ -43,11 +43,22 @@ public class Course {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "course")
     private List<Subscription> subscriptions;
 
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "course")
+    private List<Purchase> purchases;
+
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(name = "subscriptions",
+    joinColumns = {@JoinColumn(name = "course_id")},
+    inverseJoinColumns = {@JoinColumn(name = "student_id")})
+    private List<Student> students;
+
     public Course() {
     }
 
-    public Course(String name, Integer duration, CourseType courseType, String description, Teacher teacher,
-                  Integer studentsCount, Integer price, Float pricePerHour, List<Subscription> subscriptions) {
+    public Course(Integer id, String name, Integer duration, CourseType courseType, String description,
+                  Teacher teacher, Integer studentsCount, Integer price, Float pricePerHour,
+                  List<Subscription> subscriptions, List<Purchase> purchases, List<Student> students) {
+        this.id = id;
         this.name = name;
         this.duration = duration;
         this.courseType = courseType;
@@ -57,6 +68,8 @@ public class Course {
         this.price = price;
         this.pricePerHour = pricePerHour;
         this.subscriptions = subscriptions;
+        this.purchases = purchases;
+        this.students = students;
     }
 
     public void addSubscriptionToCourse(Subscription subscription){
@@ -64,6 +77,13 @@ public class Course {
             subscriptions = new ArrayList<>();
         }
         subscriptions.add(subscription);
+    }
+
+    public void addPurchaseToStudent(Purchase purchase){
+        if(purchases == null){
+            purchases = new ArrayList<>();
+        }
+        purchases.add(purchase);
     }
 
     public List<Subscription> getSubscriptions() {
@@ -144,6 +164,22 @@ public class Course {
 
     public void setPricePerHour(Float pricePerHour) {
         this.pricePerHour = pricePerHour;
+    }
+
+    public List<Student> getStudents() {
+        return students;
+    }
+
+    public void setStudents(List<Student> students) {
+        this.students = students;
+    }
+
+    public List<Purchase> getPurchases() {
+        return purchases;
+    }
+
+    public void setPurchases(List<Purchase> purchases) {
+        this.purchases = purchases;
     }
 
     @Override

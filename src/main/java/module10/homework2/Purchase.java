@@ -1,48 +1,44 @@
 package module10.homework2;
 
+
 import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name = "subscriptions")
-public class Subscription {
+@Table(name = "purchaselist")
+public class Purchase {
+
+
+//    @Column(name = "student_name")
+//    private String studentName;
+//
+//    @Column(name = "course_name")
+//    private String courseName;
 
     @EmbeddedId
-    private SubscriptionKey id;
-
-//    @Column(name = "student_id", insertable = false, updatable = false)
-//    private Integer studentId;
-//
-//    @Column(name = "course_id", insertable = false, updatable = false)
-//    private Integer courseId;
+    private PurchaseListKey purchaseListKey;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "student_id", insertable = false, updatable = false)
+    @JoinColumn(name = "student_name", insertable = false, updatable = false)
     private Student student;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "course_id", insertable = false, updatable = false)
+    @JoinColumn(name = "course_name", insertable = false, updatable = false)
     private Course course;
+
+    private Integer price;
 
     @Column(name = "subscription_date")
     private Date subscriptionDate;
 
-    public Subscription() {
+    public Purchase() {
     }
 
-    public Subscription(SubscriptionKey id, Student student, Course course, Date subscriptionDate) {
-        this.id = id;
+    public Purchase(Student student, Course course, Integer price, Date subscriptionDate) {
         this.student = student;
         this.course = course;
+        this.price = price;
         this.subscriptionDate = subscriptionDate;
-    }
-
-    public SubscriptionKey getId() {
-        return id;
-    }
-
-    public void setId(SubscriptionKey id) {
-        this.id = id;
     }
 
     public Student getStudent() {
@@ -61,6 +57,14 @@ public class Subscription {
         this.course = course;
     }
 
+    public Integer getPrice() {
+        return price;
+    }
+
+    public void setPrice(Integer price) {
+        this.price = price;
+    }
+
     public Date getSubscriptionDate() {
         return subscriptionDate;
     }
@@ -71,9 +75,11 @@ public class Subscription {
 
     @Override
     public String toString() {
-        return "Subscription{" +
-                "student=" + student +
+        return "Purchase{" +
+                "purchaseListKey=" + purchaseListKey +
+                ", student=" + student +
                 ", course=" + course +
+                ", price=" + price +
                 ", subscriptionDate=" + subscriptionDate +
                 '}';
     }

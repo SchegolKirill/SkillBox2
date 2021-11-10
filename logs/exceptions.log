@@ -24,3 +24,7 @@
 2021-39-05 15:39:56.725 [main] ERROR org.hibernate.orm.connections.pooling - Connection leak detected: there are 1 unclosed connections!
 2021-40-05 15:40:28.142 [main] ERROR org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - Connection leak detected: there are 1 unclosed connections upon shutting down pool jdbc:mysql://localhost:3306/skillbox?allowPublicKeyRetrieval=true
 2021-40-05 15:40:28.146 [main] ERROR org.hibernate.orm.connections.pooling - Connection leak detected: there are 1 unclosed connections!
+2021-00-10 14:00:33.080 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Table 'skillbox.subscription' doesn't exist
+2021-01-10 14:01:14.038 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Table 'skillbox.subscription' doesn't exist
+2021-02-10 14:02:49.396 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Table 'skillbox.subscription' doesn't exist
+2021-04-10 14:04:21.617 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Table 'skillbox.subscription' doesn't exist

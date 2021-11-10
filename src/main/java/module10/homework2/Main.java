@@ -19,10 +19,11 @@ public class Main {
         SessionFactory sessionFactory = new Configuration()
                 .configure("hibernate.cfg.xml")
                 .addAnnotatedClass(Course.class)
-                .addAnnotatedClass(PurchaseList.class)
+                .addAnnotatedClass(Teacher.class)
                 .addAnnotatedClass(Student.class)
                 .addAnnotatedClass(Subscription.class)
-                .addAnnotatedClass(Teacher.class)
+                .addAnnotatedClass(LinkedPurchase.class)
+                .addAnnotatedClass(Purchase.class)
                 .buildSessionFactory();
 
         Session session = null;
@@ -31,11 +32,29 @@ public class Main {
             session = sessionFactory.getCurrentSession();
             session.beginTransaction();
 
-            List<Course> courseList = session.createQuery("from Course").getResultList();
+//            String sql = "CREATE TABLE IF NOT EXISTS linked_purchaselist " +
+//                    "(student_id INT UNSIGNED NOT NULL, " +
+//                    "course_id INT UNSIGNED NOT NULL, UNIQUE KEY `unq` (`student_id`,`course_id`), " +
+//                    "KEY `course_idx` (`course_id`),\n" +
+//                    "            CONSTRAINT `course` FOREIGN KEY (`course_id`) REFERENCES `courses` (`id`),\n" +
+//                    "            CONSTRAINT `student` FOREIGN KEY (`student_id`) REFERENCES `students` (`id`)\n" +
+//                    ") ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci";
+//
+//            Query query = session.createSQLQuery(sql).addEntity(LinkedPurchaseList.class);
 
-            for(Course course: courseList){
-                System.out.println(course.getName() + " - " + course.getStudentsCount());
-            }
+            //List<Course> courseList = session.createQuery("from Course").getResultList();
+
+//            for(Course course: courseList){
+//                System.out.println(course.getName() + " - " + course.getTeacher().getName() + " - "
+//                        + course.getStudents().size() + " студентов");
+//            }
+
+            List<Purchase> purchaseList = session.createQuery("from Course").getResultList();
+//            for(Purchase purchase : purchaseList){
+//                System.out.println(purchase);
+//            }
+
+
 
             session.getTransaction().commit();
             System.out.println("АУФ");

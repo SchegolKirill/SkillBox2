@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-//@Entity
+@Entity
 @Table(name = "students")
 public class Student {
 
@@ -23,15 +23,20 @@ public class Student {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "student")
     private List<Subscription> subscriptions;
 
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "student")
+    private List<Purchase> purchases;
+
     public Student() {
     }
 
-    public Student(Integer id, String name, Integer age, Date registrationDate, List<Subscription> subscriptions) {
+    public Student(Integer id, String name, Integer age,
+                   Date registrationDate, List<Subscription> subscriptions, List<Purchase> purchases) {
         this.id = id;
         this.name = name;
         this.age = age;
         this.registrationDate = registrationDate;
         this.subscriptions = subscriptions;
+        this.purchases = purchases;
     }
 
     public void addSubscriptionToStudent(Subscription subscription){
@@ -39,6 +44,13 @@ public class Student {
             subscriptions = new ArrayList<>();
         }
         subscriptions.add(subscription);
+    }
+
+    public void addPurchaseToStudent(Purchase purchase){
+        if(purchases == null){
+            purchases = new ArrayList<>();
+        }
+        purchases.add(purchase);
     }
 
     public Integer getId() {
@@ -79,6 +91,14 @@ public class Student {
 
     public void setSubscriptions(List<Subscription> subscriptions) {
         this.subscriptions = subscriptions;
+    }
+
+    public List<Purchase> getPurchases() {
+        return purchases;
+    }
+
+    public void setPurchases(List<Purchase> purchases) {
+        this.purchases = purchases;
     }
 
     @Override

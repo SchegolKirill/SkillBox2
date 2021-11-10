@@ -20,9 +20,10 @@
         <property name="hbm2ddl.auto">validate</property>
 
         <mapping class="module10.homework2.Course"></mapping>
-        <mapping class="module10.homework2.PurchaseList"></mapping>
+        <mapping class="module10.homework2.Purchase"></mapping>
         <mapping class="module10.homework2.Student"></mapping>
         <mapping class="module10.homework2.Subscription"></mapping>
         <mapping class="module10.homework2.Teacher"></mapping>
+        <mapping class="module10.homework2.LinkedPurchase"></mapping>
     </session-factory>
 </hibernate-configuration>
